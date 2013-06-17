@@ -8,6 +8,13 @@ Check out the examples folder for some image samples and their corresponding out
 
     cat examples/pikachu.ansi
 
+I optimized for images with dark backgrounds and used 0's and 1's for the character set but it's pretty easy to customize the code to convert to your liking! The basic strategy of conversion is very simple:
+
+1. Shrink image to desired size
+2. For each pixel, find the corresponding color in ANSI's limited color palette
+3. Set the foreground to that color
+4. Print a random 0 or 1
+
 ## Installation
 
 1. Install go
@@ -23,4 +30,3 @@ On a Mac the commands are
 ## Usage
 
     ./ansize <image> <output> [width]
-    
