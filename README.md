@@ -22,7 +22,7 @@ I optimized for images with dark backgrounds and used 0's and 1's for the charac
 3. Install github.com/nfnt/
 4. Build ansize
 
-On a Mac the commands are
+On a Mac with Homebrew the commands are
 
     brew install go
     mkdir /usr/local/lib/go
