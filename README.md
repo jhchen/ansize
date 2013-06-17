@@ -18,12 +18,15 @@ I optimized for images with dark backgrounds and used 0's and 1's for the charac
 ## Installation
 
 1. Install go
-2. Install github.com/nfnt/resize
-3. Build ansize
+2. Set your $GOPATH
+3. Install github.com/nfnt/
+4. Build ansize
 
 On a Mac the commands are
 
     brew install go
+    mkdir /usr/local/lib/go
+    export GOPATH=/usr/local/lib/go
     go get github.com/nfnt/resize
     go build ansize.go
 
