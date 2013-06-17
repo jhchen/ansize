@@ -30,11 +30,10 @@ const (
 func toAnsiCode(c color.Color) (string) {
 	r, g, b, _ := c.RGBA()
 	code := int(ANSI_BASIC_BASE + toAnsiSpace(r) * 36 + toAnsiSpace(g) * 6 + toAnsiSpace(b))
-	if (code == ANSI_BASIC_BASE) {
+	if code == ANSI_BASIC_BASE {
 		return ANSI_RESET
-	} else {
-		return "\033[" + ANSI_FOREGROUND + ";5;" + strconv.Itoa(code) + "m"
 	}
+	return "\033[" + ANSI_FOREGROUND + ";5;" + strconv.Itoa(code) + "m"
 }
 
 func toAnsiSpace(val uint32) (int) {
