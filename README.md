@@ -30,6 +30,8 @@ On a Mac with Homebrew the commands are
     go get github.com/nfnt/resize
     go build ansize.go
 
+On ArchLinux, you can simply install the package [`ansize-git`](https://aur.archlinux.org/packages/ansize-git/).
+
 ## Usage
 
     ./ansize <image> <output> [width]
