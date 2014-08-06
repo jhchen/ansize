@@ -71,7 +71,7 @@ func writeAnsiImage(img image.Image, file *os.File, width int) {
 func main() {
 	rand.Seed(time.Now().UTC().UnixNano())
 	if len(os.Args) < 3 {
-		fmt.Println("Usage: ./ansize <image> <output> [width]>")
+		fmt.Println("Usage: ansize <image> <output> [width]>")
 		return
 	}
 	imageName, outputName := os.Args[1], os.Args[2]
