@@ -17,10 +17,19 @@ I optimized for images with dark backgrounds and used 0's and 1's for the charac
 
 ## Installation
 
+    go get github.com/jhchen/ansize
+
+## Usage
+
+    ansize <image> <output> [width]
+
+## Development
+
 1. Install go
 2. Set your $GOPATH
-3. Install github.com/nfnt/
-4. Build ansize
+3. Install github.com/nfnt/resize
+4. Clone ansize
+5. Build ansize
 
 On a Mac with Homebrew the commands are
 
@@ -28,10 +37,5 @@ On a Mac with Homebrew the commands are
     mkdir /usr/local/lib/go
     export GOPATH=/usr/local/lib/go
     go get github.com/nfnt/resize
+    git clone git@github.com:jhchen/ansize.git
     go build ansize.go
-
-On ArchLinux, you can simply install the package [`ansize-git`](https://aur.archlinux.org/packages/ansize-git/).
-
-## Usage
-
-    ./ansize <image> <output> [width]
