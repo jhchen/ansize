@@ -41,7 +41,9 @@ func toAnsiSpace(val uint32) (int) {
 }
 
 func writeAnsiImage(img image.Image, file *os.File, width int) {
-	m := resize.Resize(uint(width), uint(float32(width) * PROPORTION), img, resize.Lanczos3)
+	imgW, imgH := float32(img.Bounds().Dx()), float32(img.Bounds().Dy())
+	height := float32(width) * (imgH / imgW) * PROPORTION
+	m := resize.Resize(uint(width), uint(height), img, resize.Lanczos3)
 	var current, previous string
 	bounds := m.Bounds()
 	for y := bounds.Min.Y; y < bounds.Max.Y; y++ {
